@@ -1,0 +1,3 @@
+﻿  ExApr06.cpp
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab04\Lab04\ExApr06.cpp(35,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Lab04.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab04\x64\Debug\Lab04.exe
