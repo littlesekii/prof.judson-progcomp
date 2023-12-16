@@ -1,0 +1,3 @@
+﻿  ExApr06.cpp
+D:\SEKI\Programming\C++\Labs\Lab03\Lab03\ExApr06.cpp(6,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Lab03.vcxproj -> D:\SEKI\Programming\C++\Labs\Lab03\x64\Debug\Lab03.exe
