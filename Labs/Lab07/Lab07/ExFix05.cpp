@@ -4,10 +4,10 @@
 using namespace std;
 
 
-bool testarBit(unsigned char value, int position);
+bool testarBit(unsigned char, int);
 
-unsigned char ligarBit(unsigned char value, int position);
-unsigned char desligarBit(unsigned char value, int position);
+unsigned char ligarBit(unsigned char, int);
+unsigned char desligarBit(unsigned char, int);
 
 int main() {
 	system("chcp 1252 > nil");
