@@ -1,16 +1,29 @@
 #include "binario.h"
 
 
-unsigned short ligarBit(unsigned short s, unsigned short pos) {
-
+unsigned short ligarBit(unsigned short s, int pos) {
+	unsigned short tester{ 1 };
+	tester <<= pos;
+	return s | tester;
 }
-unsigned short desligarBit(unsigned short s, unsigned short pos);
-unsigned short testarBit(unsigned short, unsigned short pos);
+unsigned short desligarBit(unsigned short s, int pos) {
+	unsigned short tester{ 1 };
+	tester <<= pos;
+	tester = ~tester;
 
-unsigned short bitCheckAND(unsigned short s1, unsigned short s2) {
+	return s & tester;
+}
+bool testarBit(unsigned short s, int pos) {
+	unsigned short tester{ 1 };
+	tester <<= pos;
+
+	return s & tester;
+}
+
+unsigned short bitCheckAND(unsigned short s1, int s2) {
 	return s1 & s2;
 }
-unsigned short bitCheckOR(unsigned short s1, unsigned short s2) {
+unsigned short bitCheckOR(unsigned short s1,int s2) {
 	return s1 | s2;
 }
 

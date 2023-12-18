@@ -21,9 +21,15 @@
     <ClCompile Include="binario.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="genetico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="genetico.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

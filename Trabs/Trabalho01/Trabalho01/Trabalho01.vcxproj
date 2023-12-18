@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="binario.cpp" />
+    <ClCompile Include="genetico.cpp" />
     <ClCompile Include="problema.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binario.h" />
+    <ClInclude Include="genetico.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
