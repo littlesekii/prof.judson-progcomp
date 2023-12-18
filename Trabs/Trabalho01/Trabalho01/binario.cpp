@@ -28,7 +28,9 @@ unsigned short bitCheckOR(unsigned short s1,int s2) {
 }
 
 unsigned short bitsBaixos(unsigned short s) {
-	return s << 8 >> 8;
+	//limpa os bits altos
+	s <<= 8;
+	return s >> 8;
 }
 unsigned short bitsAltos(unsigned short s) {
 	return s >> 8;

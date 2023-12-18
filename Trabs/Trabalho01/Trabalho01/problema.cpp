@@ -1,4 +1,5 @@
 #include <iostream>
+#include "genetico.h"
 
 using namespace std;
 
@@ -14,9 +15,10 @@ int main() {
 	cin >> solucao5;
 	cin >> solucao6;
 
-
-
-
+	cout << endl << cruzamentoPontoUnico(solucao1, solucao2);
+	cout << endl << cruzamentoAritmetico(solucao3, solucao4);
+	cout << endl << mutacaoSimples(solucao5);
+	cout << endl << mutacaoDupla(solucao6);
 
 	return 0;
 }
