@@ -2,40 +2,22 @@
 
 using namespace std;
 
-struct peixe {
-	char tipo[20];
-	float peso;
-	unsigned comp;
-};
-
-void mostrarPeso(peixe*);
-
 int main(void) {
 	system("chcp 1252 > nil");
 
+	unsigned short qtdNotas{};
 
-	int arraySize{};
-	cout << "Tamanho do vetor: ";
-	cin >> arraySize;
+	cout << "Digite o número de alunos (mínimo 2): ";
+	cin >> qtdNotas;
 
-	peixe* peixes = new peixe[arraySize];
+	float* notas = new float[qtdNotas];
 
-	cout << endl;
-	cout << "Tipo: ";
-	cin >> peixes->tipo;
-	cout << "Peso: ";
-	cin >> peixes->peso;
-	cout << "Comprimento: ";
-	cin >> peixes->comp;
-	cout << endl;
+	cout << "Digite a nota de dois alunos:\n";
+	cin >> *notas;
+	cin >> *(notas + 1);
 
-	mostrarPeso(peixes);
+	cout << "As notas digitadas foram " << *notas << " e " << *(notas + 1);
 
-	delete[] peixes;
-
+	delete[] notas;
 	return 0;
-}
-
-void mostrarPeso(peixe* peixes) {
-	cout << "O peso do peixe é de " << peixes->peso << " gramas.";
 }
