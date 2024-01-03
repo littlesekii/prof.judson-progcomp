@@ -21,6 +21,7 @@ int main(void) {
 	carros++;
 	cin >> carros->modelo >> carros->ano >> carros->preco;
 
+	--carros;
 	valorTotal(carros);
 
 	delete[] carros;
@@ -31,9 +32,9 @@ int main(void) {
 void valorTotal(carro* c) {
 	char output[101]{};
 
-	setlocale(LC_NUMERIC, "Portuguese");
+	//setlocale(LC_NUMERIC, "Portuguese");
 	sprintf(output,
-		"O valor total é R$%.2f",
+		"O valor total é R$ %.2f",
 		c->preco + (c + 1)->preco
 	);
 
