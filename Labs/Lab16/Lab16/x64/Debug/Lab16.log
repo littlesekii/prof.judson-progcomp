@@ -1,3 +1,2 @@
-﻿  ExFix02.cpp
-D:\SEKI\Learning\Programming\Judson Santiago - Programação de Computadores\Labs\Lab16\Lab16\ExFix02.cpp(11,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  Lab16.vcxproj -> D:\SEKI\Learning\Programming\Judson Santiago - Programação de Computadores\Labs\Lab16\x64\Debug\Lab16.exe
+﻿  ExApr02Simplified.cpp
+  Lab16.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab16\x64\Debug\Lab16.exe
