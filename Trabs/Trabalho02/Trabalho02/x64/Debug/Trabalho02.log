@@ -1,0 +1,3 @@
+﻿  estatisticas.cpp
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Trabs\Trabalho02\Trabalho02\estatisticas.cpp(122,72): warning C4267: 'argument': conversion from 'size_t' to 'unsigned short', possible loss of data
+  Trabalho02.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Trabs\Trabalho02\x64\Debug\Trabalho02.exe
