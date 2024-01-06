@@ -1,2 +1,4 @@
-﻿  ExApr04.cpp
+﻿  ExApr05.cpp
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab17\Lab17\ExApr05.cpp(15,21): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab17\Lab17\ExApr05.cpp(16,18): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
   Lab17.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab17\x64\Debug\Lab17.exe

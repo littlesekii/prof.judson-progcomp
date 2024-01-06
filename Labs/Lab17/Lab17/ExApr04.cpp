@@ -38,7 +38,5 @@ int main()
 
 	cout << "Login e senha " << ((!auth) ? "in" : "") << "corretos.";
 
-
-
 	return 0;
 }
