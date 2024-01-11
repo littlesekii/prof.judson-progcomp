@@ -1,25 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void exibirVetorInt(int[], int);
-
 int main() {
 	// Muda o código da página do console para 1252
 	system("chcp 1252 > nil");
 
-	int mat[2][3] =
-	{
-		{1,2,3},
-		{4,5,6}
-	};
+	char ascii[16][16]{};
 
-	exibirVetorInt(mat[0], sizeof(mat[0]) / sizeof(int))	;
+	char current = 0;
+	for (size_t i = 0; i < 16; i++)
+		for (size_t j = 0; j < 16; j++)
+			ascii[j][i] = current++;
 
+
+	cout << ascii[4][1];
 
 	return 0;
-}
-
-void exibirVetorInt(int vet[], int size) {
-	for (size_t i{}; i < size; i++)
-		cout << vet[i] << " ";
 }
