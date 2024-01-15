@@ -36,6 +36,8 @@ int main()
 	{
 		if (contribuintes[i].valor >= 10'000)
 			cout << contribuintes[i].nome << " " << contribuintes[i].valor << endl;
+		else
+			cout << "nenhum" << endl;
 	}
 	cout << endl;
 	cout << "Patronos\n";
@@ -43,6 +45,8 @@ int main()
 	{
 		if (contribuintes[i].valor < 10'000)
 			cout << contribuintes[i].nome << " " << contribuintes[i].valor << endl;
+		else
+			cout << "nenhum" << endl;
 	}
 
 	delete[] contribuintes;
