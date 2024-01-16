@@ -30,24 +30,35 @@ int main()
 		cin.ignore();
 	}
 
+	int qtdCategoria{};
+
 	cout << endl;
 	cout << "Grandes Patronos\n";
 	for (size_t i = 0; i < qtdContribuintes; i++)
 	{
 		if (contribuintes[i].valor >= 10'000)
+		{
 			cout << contribuintes[i].nome << " " << contribuintes[i].valor << endl;
-		else
-			cout << "nenhum" << endl;
+			qtdCategoria++;
+		}
+		
 	}
+	if (!qtdCategoria)
+		cout << "nenhum" << endl;
+
+	qtdCategoria = 0;
 	cout << endl;
 	cout << "Patronos\n";
 	for (size_t i = 0; i < qtdContribuintes; i++)
 	{
 		if (contribuintes[i].valor < 10'000)
+		{
 			cout << contribuintes[i].nome << " " << contribuintes[i].valor << endl;
-		else
-			cout << "nenhum" << endl;
+			qtdCategoria++;
+		}
 	}
+	if (!qtdCategoria)
+		cout << "nenhum" << endl;
 
 	delete[] contribuintes;
 
