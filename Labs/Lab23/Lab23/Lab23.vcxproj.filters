@@ -18,8 +18,5 @@
     <ClCompile Include="ExApr01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ExFix05.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

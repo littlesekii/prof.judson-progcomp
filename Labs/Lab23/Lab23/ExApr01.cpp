@@ -2,10 +2,14 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
 
 using namespace std;
 
 const char* strreplace(const char*, const char*, const char*);
+
+bool startsWith(const char* source, const char* searchexpr);
+const char* strreplacev2(const char* source, const char* searchexpr, const char* replaceexpr);
 
 int main()
 {
@@ -35,7 +39,8 @@ int main()
 	char line[100];
 	while (fin.getline(line, 101))
 	{
-		fout << strreplace(line, "cout", "print") << endl;
+		strcpy(line, strreplacev2(line, "cout", "print"));
+		fout << line << endl;
 	}
 
 
@@ -144,6 +149,50 @@ const char* strreplace(const char* source, const char* searchexpr, const char* r
 	}
 
 	delete[] ranges;
+
+	return result;
+}
+
+bool startsWith(const char* source, const char* searchexpr)
+{
+	//if searchexpr length is greater than source
+	if (strlen(searchexpr) > strlen(source))
+		return false;
+
+	//iterate every search character
+	for (size_t i = 0; i < strlen(searchexpr); i++)
+		//if character does not match
+		if (source[i] != searchexpr[i])
+			return false;
+
+	return true;
+}
+
+const char* strreplacev2(const char* source, const char* searchexpr, const char* replaceexpr)
+{
+	char result[1001]{};
+
+	size_t i = 0;
+
+	//while its not the end of the source
+	while (source[i])
+	{
+		//if current char of source is different from searchexpr's first 
+		//or if from current address onward starts with the search expression
+		if (source[i] != searchexpr[0] ||!startsWith((source + i), searchexpr))
+		{
+			//concat the current char to the result and move current adress to the next character
+			char c[]{ source[i++], '\0' };
+			strcat(result, c);
+		}
+		else
+		{
+			//concat the replace expression
+			strcat(result, replaceexpr);
+			//move current address 
+			i += strlen(searchexpr);
+		}
+	}
 
 	return result;
 }

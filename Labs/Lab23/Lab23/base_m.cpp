@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	int num = 5;
-	print << num << endl;
+	cout << num << endl;
 
 	return 0;
 }

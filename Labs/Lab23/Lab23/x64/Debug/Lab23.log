@@ -1,1 +1,7 @@
-﻿  Lab23.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\x64\Debug\Lab23.exe
+﻿  ExApr01.cpp
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\Lab23\ExApr01.cpp(63,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\Lab23\ExApr01.cpp(64,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\Lab23\ExApr01.cpp(65,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\Lab23\ExApr01.cpp(197): warning C4172: returning address of local variable or temporary: result
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\Lab23\ExApr01.cpp(153): warning C4172: returning address of local variable or temporary: result
+  Lab23.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\x64\Debug\Lab23.exe
