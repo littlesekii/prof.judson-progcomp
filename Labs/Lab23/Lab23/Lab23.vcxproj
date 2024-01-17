@@ -127,9 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ex01.cpp" />
+    <ClCompile Include="ExFix02.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="notas.txt" />
+    <Text Include="num.txt" />
+    <Text Include="pescado.txt" />
+    <Text Include="resultado.txt" />
+    <Text Include="sol.txt" />
     <Text Include="texto.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
