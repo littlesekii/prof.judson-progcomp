@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ExApr01.cpp" />
+    <ClCompile Include="ExApr02.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="palindromos.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
