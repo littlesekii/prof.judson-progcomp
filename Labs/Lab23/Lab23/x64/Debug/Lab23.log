@@ -1,3 +1,2 @@
-﻿  ExApr02.cpp
-D:\SEKI\Learning\Programming\Judson Santiago - Programação de Computadores\Labs\Lab23\Lab23\ExApr02.cpp(58,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Lab23.vcxproj -> D:\SEKI\Learning\Programming\Judson Santiago - Programação de Computadores\Labs\Lab23\x64\Debug\Lab23.exe
+﻿  ExApr03.cpp
+  Lab23.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Labs\Lab23\x64\Debug\Lab23.exe

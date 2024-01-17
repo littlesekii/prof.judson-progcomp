@@ -29,7 +29,6 @@ int main()
 	{
 		fin >> palavra;
 
-
 		minusculo(palavra);
 
 		if (verificaPalindromo(palavra)) 
@@ -39,13 +38,16 @@ int main()
 		}
 	}
 
+	fin.close();
+
 	cout << "E no fim, têm " << qtdPalindromos << " palíndromos no arquivo.";
 
 	return 0;
 }
 
 
-void minusculo(char* palavra) {
+void minusculo(char* palavra) 
+{
 
 	for (size_t i = 0; i < strlen(palavra); i++)
 	{
