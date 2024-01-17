@@ -127,15 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ExFix02.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="notas.txt" />
-    <Text Include="num.txt" />
-    <Text Include="pescado.txt" />
-    <Text Include="resultado.txt" />
-    <Text Include="sol.txt" />
-    <Text Include="texto.txt" />
+    <ClCompile Include="ExApr01.cpp" />
+    <ClCompile Include="ExFix05.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

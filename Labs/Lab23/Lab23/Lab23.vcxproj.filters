@@ -15,28 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExFix02.cpp">
+    <ClCompile Include="ExApr01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="texto.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sol.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="num.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="pescado.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="notas.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="resultado.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <ClCompile Include="ExFix05.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
