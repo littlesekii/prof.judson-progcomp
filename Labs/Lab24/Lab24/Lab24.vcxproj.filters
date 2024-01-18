@@ -26,9 +26,12 @@
     <None Include="pescado.bin">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="imagemcolorida.bin">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ex02.cpp">
+    <ClCompile Include="ExApr02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

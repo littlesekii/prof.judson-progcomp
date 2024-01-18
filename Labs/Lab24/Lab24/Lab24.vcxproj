@@ -130,11 +130,12 @@
     <Text Include="pescado.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="imagemcolorida.bin" />
     <None Include="pescado.bin" />
     <None Include="pescado.lit" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ex02.cpp" />
+    <ClCompile Include="ExApr02.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
