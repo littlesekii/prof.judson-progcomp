@@ -133,9 +133,10 @@
     <None Include="imagemcolorida.bin" />
     <None Include="pescado.bin" />
     <None Include="pescado.lit" />
+    <None Include="senha.bin" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExApr02.cpp" />
+    <ClCompile Include="ExApr03.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
