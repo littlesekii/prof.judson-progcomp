@@ -18,6 +18,9 @@
     <Text Include="valores.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="numeros.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="valor.bin">
@@ -25,7 +28,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExApr01.cpp">
+    <ClCompile Include="ExApr03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
