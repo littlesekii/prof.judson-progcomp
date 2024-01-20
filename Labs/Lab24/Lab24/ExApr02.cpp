@@ -12,7 +12,7 @@ struct soldado
 	unsigned partidas;
 };
 
-void gravaSoldado(soldado);
+void gravaSoldado(soldado*);
 void mostraSoldado(const soldado*);
 
 int main()
@@ -23,11 +23,8 @@ int main()
 	fin.open("soldado.bin", ios::in | ios::binary);
 
 	char escolha;
-	soldado sol{};
 	if (fin.is_open())
-	{
-		fin.read((char*)(&sol), sizeof(sol));
-		
+	{		
 		cout << "[N]ovo soldado(sobrescreve o anterior)\n";
 		cout << "[A]tualiza soldado(com os dados da última partida)\n";
 		cout << "[E]xibe soldado(atual)\n";
@@ -43,12 +40,13 @@ int main()
 	else
 		escolha = 'n';
 
-	fin.close();
 		
 	switch (char(tolower(escolha))) 
 	{
 		case 'n':
 		{
+			soldado sol{};
+
 			cout << "Novo soldado\n";
 			cout << "------------\n";
 			cout << "Nome: ";
@@ -56,12 +54,15 @@ int main()
 			cin.getline(sol.nome, 51);
 			
 			cout << endl;
-			gravaSoldado(sol);
+			gravaSoldado(&sol);
 
 			break;
 		}
 		case 'a':
 		{
+			soldado sol{};
+			fin.read((char*)(&sol), sizeof(sol));
+
 			cout << "Atualizar soldado\n";
 			cout << "-----------------\n";
 			cout << "Eliminações: ";
@@ -73,28 +74,32 @@ int main()
 			sol.partidas++;
 
 			cout << endl;
-			gravaSoldado(sol);
+			gravaSoldado(&sol);
 
 			break;
 		}
 		case 'e':
 		{
+			soldado sol{};
+			fin.read((char*)(&sol), sizeof(sol));
+
 			mostraSoldado(&sol);
 			break;
 		}
 	}
 
+	fin.close();
 	return EXIT_SUCCESS;
 }
 
-void gravaSoldado(soldado sol) {
+void gravaSoldado(soldado* sol) {
 
 	ofstream fout;
 	fout.open("soldado.bin", ios::out, ios::binary);
 
 	if (fout.is_open())
 	{
-		fout.write((char*)(&sol), sizeof(sol));
+		fout.write((char*)(sol), sizeof(*sol));
 		cout << "Soldado salvo com sucesso!";
 	}
 	else

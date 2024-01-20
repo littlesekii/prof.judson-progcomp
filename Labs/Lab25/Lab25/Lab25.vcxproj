@@ -127,10 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ex02.cpp" />
+    <Text Include="valores.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="valores.txt" />
+    <None Include="valor.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ExApr01.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
