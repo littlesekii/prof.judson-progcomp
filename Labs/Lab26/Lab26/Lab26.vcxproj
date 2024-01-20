@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExFix03.cpp" />
+    <ClCompile Include="ExApr04.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pedido.txt" />
+    <Text Include="produtos.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -15,8 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ExFix03.cpp">
+    <ClCompile Include="ExApr04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="produtos.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="pedido.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
