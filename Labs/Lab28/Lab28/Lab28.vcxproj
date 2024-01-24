@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ExFix02.cpp" />
+    <ClCompile Include="ExApr03.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pares.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
