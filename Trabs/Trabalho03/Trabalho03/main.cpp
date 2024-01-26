@@ -32,16 +32,22 @@ void sucesso(const char*);
 
 char menu();
 
+void carregarBaralho();
+void salvarBaralho();
+
 void executar(char);
 void executarCadastrar();
 void executarImportar();
 void executarAlterar();
+void executarExcluir();
 void executarListar();
 /* FUNÇÕES */
 
 int main()
 {
 	system("chcp 1252 > nil");
+
+	carregarBaralho();
 
 	char escolha = menu();
 	while (escolha != 's')
@@ -50,6 +56,8 @@ int main()
 		executar(escolha);
 		escolha = menu();
 	}
+
+	salvarBaralho();
 
 	return EXIT_SUCCESS;
 }
@@ -88,13 +96,62 @@ char menu()
 	cout << "(E)xcluir\n";
 	cout << "(L)istar\n";
 	cout << "(S)air\n";
-
+	cout << endl;
 	cout << "Escolha uma opção [_]\b\b";
 	
 	char escolha{};
 	cin >> escolha;
 
 	return tolower(escolha);
+}
+
+void carregarBaralho()
+{
+	ifstream fin;
+	fin.open("..\\baralho.dat", ios::in | ios::binary);
+
+	if (fin.is_open())
+	{
+		char headerText[8]{};
+		int headerAmount{};
+
+		fin.read(headerText, sizeof(char[8]));
+
+		if (!strcmp(headerText, "BARALHO"))
+		{
+			fin.read((char*)(&headerAmount), sizeof(int));
+
+			fin.read((char*)(&baralho), sizeof(baralho));
+			
+			qtdCartasBaralho = headerAmount;
+		}
+
+		
+		cout << endl;
+		sucesso("Um baralho pré-existente foi carregado.");
+	}
+	fin.close();
+}
+
+void salvarBaralho()
+{
+	ofstream fout;
+	fout.open("..\\baralho.dat", ios::out | ios::trunc | ios::binary);
+
+	if (fout.is_open())
+	{
+		const char headerText[8]{ "BARALHO" };
+		const int headerAmount{ qtdCartasBaralho };
+
+		fout.write(headerText, sizeof(headerText));
+		fout.write((char*)(&headerAmount), sizeof(int));
+
+		fout.write((char*)(&baralho), sizeof(baralho));
+	}
+	fout.close();
+
+	cout << endl;
+	sucesso("Baralho salvo!");
 }
 
 void executar(char escolha)
@@ -120,11 +177,19 @@ void executar(char escolha)
 		}
 		case 'a':
 		{
-			executarAlterar();
+			if (qtdCartasBaralho > 0)
+				executarAlterar();
+			else
+				erro("O baralho se encontra vazio!");
+			
 			break;
 		}
 		case 'e':
 		{
+			if (qtdCartasBaralho > 0)
+				executarExcluir();
+			else
+				erro("O baralho se encontra vazio!");
 			break;
 		}
 		case 'l':
@@ -208,13 +273,13 @@ void executarImportar()
 				qtdCartasBaralho++;
 			}
 			else
-				limiteExcedido = true;
+				limiteExcedido = true;			
 		}
 		
 		cout << endl;
 		sucesso("Cartas importadas com sucesso!");
 		if (limiteExcedido)
-			erro("O limite de cartas do baralho foi excedido! Algumas cartas não foram importadas.");			
+			erro("O limite de cartas do baralho foi excedido! Algumas cartas não foram importadas.");
 	} 
 	else
 		erro("Não foi possível abrir o arquivo.");
@@ -239,26 +304,71 @@ void executarAlterar()
 	cout << endl;
 
 	cout << "Digite o número da carta: [_]\b\b";
-	int posCarta{};
+	int posCarta;
 	cin >> posCarta;
-	posCarta--;
+	--posCarta;
 
 	cout << endl;
-	cout << "Alterando carta \"" << baralho[posCarta].nome << "\":\n";
+	if (posCarta >= 0 && posCarta < qtdCartasBaralho)
+	{
 
-	cout << "Nome: ";
-	cin >> baralho[posCarta].nome;
-	cout << "Força: ";
-	cin >> baralho[posCarta].forca;
-	cout << "Defesa: ";
-	cin >> baralho[posCarta].defesa;
-	cout << "Velocidade: ";
-	cin >> baralho[posCarta].velocidade;
-	cout << "Magia: ";
-	cin >> baralho[posCarta].magia;
+		cout << "Alterando carta \"" << baralho[posCarta].nome << "\"...\n";
+
+		cout << "Nome: ";
+		cin >> baralho[posCarta].nome;
+		cout << "Força: ";
+		cin >> baralho[posCarta].forca;
+		cout << "Defesa: ";
+		cin >> baralho[posCarta].defesa;
+		cout << "Velocidade: ";
+		cin >> baralho[posCarta].velocidade;
+		cout << "Magia: ";
+		cin >> baralho[posCarta].magia;
+
+		cout << endl;
+		sucesso("Carta alterada com sucesso!");
+	}
+	else
+		erro("Carta não encontrada.");
+
+	pausarTela();
+	limparTela();
+}
+
+void executarExcluir()
+{
+
+	cout << "Excluir Carta\n";
+	cout << "-------------\n";
+
+	for (size_t i = 0; i < qtdCartasBaralho; i++)
+	{
+		cout << i + 1 << ") " << baralho[i].nome;
+		cout << endl;
+	}
+	cout << endl;
+
+	cout << "Digite o número da carta: [_]\b\b";
+	int posCarta;
+	cin >> posCarta;
+	--posCarta;
 
 	cout << endl;
-	sucesso("Carta alterada com sucesso!");
+	if (posCarta >= 0 && posCarta < qtdCartasBaralho)
+	{
+		cout << "Excluindo a carta \"" << baralho[posCarta].nome << "\"...\n";
+
+		for (int i = posCarta; i < qtdCartasBaralho - 1; i++)
+		{
+			baralho[i] = baralho[i + 1];
+		}
+		qtdCartasBaralho--;
+
+		cout << endl;
+		sucesso("Carta excluída com sucesso!");
+	}
+	else
+		erro("Carta não encontrada.");
 
 	pausarTela();
 	limparTela();

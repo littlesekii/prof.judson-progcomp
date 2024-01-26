@@ -26,5 +26,8 @@
     <Text Include="fnaf.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="frutas.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

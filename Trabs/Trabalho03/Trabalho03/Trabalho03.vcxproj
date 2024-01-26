@@ -132,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="fnaf.txt" />
+    <Text Include="frutas.txt" />
     <Text Include="viewers.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
