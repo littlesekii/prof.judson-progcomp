@@ -146,7 +146,7 @@ void salvarBaralho()
 		fout.write(headerText, sizeof(headerText));
 		fout.write((char*)(&headerAmount), sizeof(int));
 
-		fout.write((char*)(&baralho), sizeof(baralho));
+		fout.write((char*)(&baralho), sizeof(Carta) * qtdCartasBaralho);
 	}
 	fout.close();
 
@@ -348,6 +348,7 @@ void executarExcluir()
 	}
 	cout << endl;
 
+	cout << "Para deletar o baralho, digite \"0\"\n";
 	cout << "Digite o número da carta: [_]\b\b";
 	int posCarta;
 	cin >> posCarta;
@@ -364,8 +365,13 @@ void executarExcluir()
 		}
 		qtdCartasBaralho--;
 
-		cout << endl;
 		sucesso("Carta excluída com sucesso!");
+	}
+	else if (posCarta == -1) 
+	{
+		qtdCartasBaralho = 0;
+
+		sucesso("Baralho excluído com sucesso!");
 	}
 	else
 		erro("Carta não encontrada.");

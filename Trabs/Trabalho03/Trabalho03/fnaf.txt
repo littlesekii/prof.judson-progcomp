@@ -1,3 +1,8 @@
-Bonnie       12   22   32  4.8
-Chica        23   17    5  9.5
-Fox          12   12   50    1
+Bonnie       12   26   32  4.8
+Chica        23   17    5  7.5
+Foxy         14   12   50    1
+Freddy       30   20    5  4.0
+Springtrap   25   15   34  3.2
+Mangle		 16   17    9  4.3
+B.B			  0   30    0  8.0
+G.Freddy     99   99   99  9.9

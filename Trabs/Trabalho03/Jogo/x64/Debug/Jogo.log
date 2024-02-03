@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Trabs\Trabalho03\Jogo\main.cpp(339,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Jogo.vcxproj -> D:\Learning\Programming\C++\Judson Santiago - Programação de Computadores\Trabs\Trabalho03\x64\Debug\Jogo.exe
